@@ -7,11 +7,6 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.form.validateFields( ( err, values ) => {
-      if ( !err ) {
-        console.log( 'Received values of form: ', values );
-      }
-    } );
   };
 
   render () {
@@ -27,14 +22,13 @@ export default class Login extends Component {
             <Form.Item>
               <Input
                 prefix={ <Icon type="user" style={ { color: 'rgba(0,0,0,.25)' } } /> }
-                placeholder="用户名"
+                placeholder="用户名" className='login-form-user'
               />
             </Form.Item>
             <Form.Item>
               <Input
                 prefix={ <Icon type="lock" style={ { color: 'rgba(0,0,0,.25)' } } /> }
-                type="password"
-                placeholder="密码"
+                type="password" placeholder="密码" className='login-form-password'
               />
             </Form.Item>
             <Form.Item>
